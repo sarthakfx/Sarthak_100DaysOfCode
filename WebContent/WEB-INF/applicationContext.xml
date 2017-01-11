@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/security 
+        http://www.springframework.org/schema/security/spring-security.xsd
+          http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<context:component-scan base-package="com.first.web"></context:component-scan>
+	<mvc:annotation-driven/>
+	  
+	
+	<!-- <tx:annotation-driven /> -->
+	
+
+	<mvc:resources mapping="/WebContent/views/images" location="/WebContent/views/images" />
+	
+<!-- 	<bean id="propertyPlaceholderConfigurer"
+		class="com.cts.fastest.util.FastestPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:../config-dev.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		id="fastestDS">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="fastestSessionFactory" />
+	</bean>
+
+	<bean
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+	<bean id="fastestSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="fastestDS" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.cts.fastest.domain.quickstart.QuickStartCategory</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartData</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartIndustry</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartRole</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartCombination</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartMapping</value>
+				<value>com.cts.fastest.domain.quickstart.CompositePK</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartQuestions</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartCompetitors</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartMyOrganisation</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartSocial</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartCompetitorOne</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartCompetitorTwo</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartAssuranceData</value>
+				<value>com.cts.fastest.domain.quickstart.QuickStartInvite</value>
+		</property>
+
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+				hibernate.show_sql=false
+				hibernate.format_sql=false
+			</value>
+					</property>
+	</bean>
+ -->
+<!-- ResourceBundleMessageSource, this class uses Properties(resources/quickstart.properties) instances as its custom 
+     data structure for messages, loading them via a PropertiesPersister strategy from Spring Resource handles. -->
+	<!-- <bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>classpath:resources\quickstart</value>
+			</list>
+		</property>
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="fallbackToSystemLocale" value="true" />
+	</bean> -->
+</beans>
